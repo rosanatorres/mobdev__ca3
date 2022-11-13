@@ -17,32 +17,39 @@
 </ion-header>
 
 <ion-content padding="">
-
+ 
+  <!-- Get all episodes and place icons -->
+  
   <ion-card *ngIf="episode" class="episode-card">
 
     <ion-item class="episode-info" lines="none">
-      <ion-icon name="text" slot="start"></ion-icon>
+      <ion-icon name="id-card-outline"></ion-icon>
+      <ion-card-header> Id: {{ episode?.episode_id }}</ion-card-header>
+    </ion-item>
+
+    <ion-item class="episode-info" lines="none">
+      <ion-icon name="copy" slot="start"></ion-icon>
       Title: {{ episode?.title }}
     </ion-item>
-
+    
     <ion-item class="episode-info" lines="none">
-      <ion-icon name="play-circle-outline" slot="start"></ion-icon>
-      Episode Number: {{ episode?.episode }}
-    </ion-item>
-
-    <ion-item class="episode-info" lines="none">
-      <ion-icon name="film-outline" slot="start"></ion-icon>
+      <ion-icon name="film" slot="start"></ion-icon>
       Season: {{ episode?.season }}
     </ion-item>
-
+    
     <ion-item class="episode-info" lines="none">
-      <ion-icon name="recording-outline" slot="start"></ion-icon>
-      Series: {{ episode?.series }}
+      <ion-icon name="play-circle-outline" slot="start"></ion-icon>
+      Episode Number: {{ episode?.season }}
     </ion-item>
 
     <ion-item class="episode-info" lines="none" *ngFor="let char of episode?.characters; let i = index">
-      <ion-icon name="people-outline" slot="start"></ion-icon>
+      <ion-icon name="person" slot="start"></ion-icon>
       Characters: {{ char }}
+    </ion-item>
+
+    <ion-item class="episode-info" lines="none">
+      <ion-icon name="videocam-outline" slot="start"></ion-icon>
+      Series: {{ episode?.series }}
     </ion-item>
   </ion-card>
 

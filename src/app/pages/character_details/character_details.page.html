@@ -18,16 +18,18 @@
 <ion-content padding="">
 
   <ion-card *ngIf="character" class="movie-card">
-    
-    <ion-item class="movie-info" lines="none">
-    <ion-icon name="id-card-outline"></ion-icon>
-    <ion-card-header> Id: {{ character?.char_id }}</ion-card-header>
-  </ion-item>
 
-  <ion-item class="movie-info" lines="none">
-    <ion-icon name="person" slot="start"></ion-icon>
-    Name: {{ character?.name }}
-  </ion-item>
+    <!-- Get all character and place icons -->
+
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="id-card-outline"></ion-icon>
+      <ion-card-header> Id: {{ character?.char_id }}</ion-card-header>
+    </ion-item>
+
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="person" slot="start"></ion-icon>
+      Name: {{ character?.name }}
+    </ion-item>
 
     <ion-item class="movie-info" lines="none">
       <ion-icon name="calendar" slot="start"></ion-icon>
@@ -65,10 +67,7 @@
     </ion-item>
 
     <ion-item class="movie-info" lines="none">
-      <img src="https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg"></ion-item>
-
-
-
+      <img src="assets/download.jpg">
+    </ion-item>
   </ion-card>
-
 </ion-content>
