@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaulthref="/tabs/(quotes:quotes)">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ quotes?.quotes }}</ion-title>
+    <ion-buttons slot="end">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding="">
+
+	
+  <ion-card *ngIf="quotes" class="movie-card">
+  
+    
+    <ion-card-content>
+   
+      <ion-list>
+        <ion-card-header>Id {{ quotes.quote_id }}: {{ quotes.quotes }}</ion-card-header>
+        <ion-item class="quote-info" lines="none">
+          Author: {{ quotes?.author }}
+        </ion-item>
+        <ion-item class="quote-info" lines="none">
+          Series: {{ quotes?.serie}}
+        </ion-item>
+        <ion-item *ngFor="let quote of (quotes | async)">
+          {{quote.author}} once quote: "{{ quote.quote }}" during {{quote.series}}.
+        </ion-item>
+        </ion-list>
+    </ion-card-content>
+ 
+
+ 
+
+  
+  </ion-card>
+
+</ion-content>

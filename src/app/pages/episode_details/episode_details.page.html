@@ -1,0 +1,49 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaultHref="/tabs/(episodes:episodes)">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ episode?.title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="unfavouriteFilm()" *ngIf="isFavourite">
+        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+      <ion-button (click)="favouriteFilm()" *ngIf="!isFavourite">
+        <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding="">
+
+  <ion-card *ngIf="episode" class="episode-card">
+
+    <ion-item class="episode-info" lines="none">
+      <ion-icon name="text" slot="start"></ion-icon>
+      Title: {{ episode?.title }}
+    </ion-item>
+
+    <ion-item class="episode-info" lines="none">
+      <ion-icon name="play-circle-outline" slot="start"></ion-icon>
+      Episode Number: {{ episode?.episode }}
+    </ion-item>
+
+    <ion-item class="episode-info" lines="none">
+      <ion-icon name="film-outline" slot="start"></ion-icon>
+      Season: {{ episode?.season }}
+    </ion-item>
+
+    <ion-item class="episode-info" lines="none">
+      <ion-icon name="recording-outline" slot="start"></ion-icon>
+      Series: {{ episode?.series }}
+    </ion-item>
+
+    <ion-item class="episode-info" lines="none" *ngFor="let char of episode?.characters; let i = index">
+      <ion-icon name="people-outline" slot="start"></ion-icon>
+      Characters: {{ char }}
+    </ion-item>
+  </ion-card>
+
+</ion-content>
