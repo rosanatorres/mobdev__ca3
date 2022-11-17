@@ -1,3 +1,4 @@
+//Contains the logic for the application's main page.
 import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
 

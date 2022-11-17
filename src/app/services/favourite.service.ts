@@ -1,4 +1,4 @@
-
+//Get favourite item from list item app
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
@@ -9,7 +9,7 @@ const STORAGE_KEY_EPISODES = 'favouriteEpisodes';
   providedIn: 'root',
 })
 export class FavouriteService {
-  constructor(private storage: Storage) {}
+  constructor(private storage: Storage) { }
 
   getAllFavouriteCharacters() {
     return this.storage.get(STORAGE_KEY_CHARACTERS);

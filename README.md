@@ -15,8 +15,7 @@ The objective of this assignment is to create an Ionic app that can consume the 
 - Possess a coherent commit history on GitHub.
 
 ## References:
-
-- https://www.youtube.com/watch?v=YaioUnMw0mo
+- https://ionicframework.com/docs/intro/vscode-extension
 - https://ionicframework.com/docs/angular/your-first-app
 - https://breakingbadapi.com/documentation
 - https://github.com/ionic-team/ionic-storage

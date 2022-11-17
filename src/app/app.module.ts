@@ -1,3 +1,5 @@
+//Specifies the files that the application uses.
+//This file acts as a central hub for the other files in application.
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';

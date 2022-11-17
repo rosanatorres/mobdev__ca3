@@ -1,11 +1,13 @@
+//Service: inserted all business rules
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-@Injectable({providedIn: 'root',
+@Injectable({
+  providedIn: 'root',
 })
 
 export class ApiService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   baseUrl: string = 'https://www.breakingbadapi.com/api/';
 
