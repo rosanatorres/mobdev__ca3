@@ -1,4 +1,3 @@
-//Start the application automatically
 tasks:
   - name: Install Ionic & Angular CLI
     command: npm install && npm i -D -E @angular/cli && npx --yes ionic serve
