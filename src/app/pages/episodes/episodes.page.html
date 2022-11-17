@@ -1,3 +1,4 @@
+<!-- First page html -->
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>Episodes</ion-title>
@@ -5,7 +6,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-list lines="none">
     <ion-item button detail lines="@inset" *ngFor="let episode of (episodes | async)" (click)="openDetails(episode)">
       {{ episode.title }}</ion-item>
   </ion-list>

@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 import { ApiService } from '../../services/api.service';
-
 import { FavouriteService } from '../../services/favourite.service';
 
 @Component({
@@ -19,7 +17,7 @@ export class EpisodeDetailsPage implements OnInit {
     private activatedRoute: ActivatedRoute,
     private api: ApiService,
     private favouriteService: FavouriteService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.episodeID = this.activatedRoute.snapshot.paramMap.get('id');

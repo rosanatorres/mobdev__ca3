@@ -1,4 +1,4 @@
-<!-- Get all Quotes, quotes id, character name and series -->
+<!-- Quotes Page html -->
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>Quotes</ion-title>
@@ -7,7 +7,8 @@
 <ion-content>
   <ion-list>
     <ion-item *ngFor="let quote of (quotes | async)">
-      ID: {{quote.quote_id}} = {{quote.author}} once quote: "{{ quote.quote }}" during {{quote.series}}.
+      <b>Id: {{quote.quote_id}}</b>
+      <center>{{quote.author}} once quote: "{{ quote.quote }}" during {{quote.series}}.</center>
     </ion-item>
   </ion-list>
 </ion-content>

@@ -1,3 +1,4 @@
+<!-- Deaths Count Page html. -->
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>Death Count</ion-title>
@@ -5,9 +6,15 @@
 </ion-header>
 <ion-content>
   <ion-list>
-      <ion-item *ngFor="let death of (deaths | async)">
-        <b>ID:{{death.death_id}}</b><center>{{ death.death }} was killed by {{ death.responsible }} with {{death.cause}}</center>
-       <ion-list><h6><center><b>Death Count:</b></center></h6><center><b>{{ death.number_of_deaths }}</b></center></ion-list>
-      </ion-item>
-    </ion-list>
+    <ion-item *ngFor="let death of (deaths | async)">
+      <b>Id: {{death.death_id}}</b>
+      <center>{{ death.death }} was killed by {{ death.responsible }} with {{death.cause}}</center>
+      <ion-list>
+        <h6>
+          <center>Death Count:</center>
+        </h6>
+        <center>{{ death.number_of_deaths }}</center>
+      </ion-list>
+    </ion-item>
+  </ion-list>
 </ion-content>

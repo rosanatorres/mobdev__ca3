@@ -1,4 +1,3 @@
-
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start" defaultHref="/tabs/(episodes:episodes)">
@@ -17,9 +16,7 @@
 </ion-header>
 
 <ion-content padding="">
- 
-  <!-- Get all episodes and place icons -->
-  
+  <!-- Details of information about characters with their classes, icons and head card. -->
   <ion-card *ngIf="episode" class="episode-card">
 
     <ion-item class="episode-info" lines="none">
@@ -31,12 +28,12 @@
       <ion-icon name="copy" slot="start"></ion-icon>
       Title: {{ episode?.title }}
     </ion-item>
-    
+
     <ion-item class="episode-info" lines="none">
       <ion-icon name="film" slot="start"></ion-icon>
       Season: {{ episode?.season }}
     </ion-item>
-    
+
     <ion-item class="episode-info" lines="none">
       <ion-icon name="play-circle-outline" slot="start"></ion-icon>
       Episode Number: {{ episode?.season }}
@@ -52,5 +49,4 @@
       Series: {{ episode?.series }}
     </ion-item>
   </ion-card>
-
 </ion-content>
