@@ -2,12 +2,15 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>Episodes</ion-title>
+    <ion-icon name="film" slot="start"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list lines="none">
     <ion-item button detail lines="@inset" *ngFor="let episode of (episodes | async)" (click)="openDetails(episode)">
-      {{ episode.title }}</ion-item>
+      {{ episode.title }}
+      <ion-icon name="information-circle" slot="end"></ion-icon>
+    </ion-item>
   </ion-list>
 </ion-content>
